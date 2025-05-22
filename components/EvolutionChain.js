@@ -44,7 +44,7 @@ const EvolutionChain = ({ evolutions, onPokemonPress }) => {
 const styles = StyleSheet.create({
   container: {
     marginVertical: 16,
-    padding: 20,
+    padding: 5,
     backgroundColor: "#f9f9f9",
     borderRadius: 20,
   },

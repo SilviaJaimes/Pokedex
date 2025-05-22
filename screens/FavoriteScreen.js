@@ -32,6 +32,7 @@ const FavoritesScreen = ({ navigation }) => {
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
         numColumns={2}
+        columnWrapperStyle={{ gap: 10 }}
         contentContainerStyle={styles.listContent}
         showsVerticalScrollIndicator={false}
       />
@@ -47,6 +48,7 @@ const styles = StyleSheet.create({
   listContent: {
     padding: 16,
     paddingBottom: 24,
+    gap: 10
   },
   emptyContainer: {
     flex: 1,

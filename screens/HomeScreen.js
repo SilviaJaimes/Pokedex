@@ -58,7 +58,6 @@ const HomeScreen = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Pokédex</Text>
-        <Text style={styles.subtitle}>Encuentra todos tus Pokémon favoritos</Text>
       </View>
       
       <SearchBar value={searchTerm} onChangeText={setSearchTerm} onClear={() => setSearchTerm("")} />
