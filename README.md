@@ -32,7 +32,7 @@ Una aplicación móvil construida con **React Native + Expo** que permite explor
 - Ordenar por nombre o por número
 - Agregar Pokemón a favoritos
 
-## 🚀 Instalación
+## Instalación 🚀
 
 #### 1. Clona el repositorio:
 ```bash
