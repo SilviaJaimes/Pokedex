@@ -15,12 +15,12 @@ Este proyecto proporciona una aplicación que consume la API de Pokedex.
 
 ## Ejecutar el proyecto
 
-Instalar node_modules
+Instalar node_modules  
 `
 npm i
 `
 
-Ejecutar  la aplicación
+Ejecutar  la aplicación  
 `
 npm run start
 `
