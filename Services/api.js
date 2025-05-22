@@ -97,7 +97,6 @@ export const fetchEvolutionChain = async (url) => {
       evolutionData = evolutionData.evolves_to[0]
     } while (evolutionData && evolutionData.hasOwnProperty("evolves_to"))
 
-    // Fetch additional data for each evolution
     const evolutionChain = await Promise.all(
       chain.map(async (evolution) => {
         const id = evolution.url.split("/").filter(Boolean).pop()

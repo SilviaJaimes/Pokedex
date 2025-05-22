@@ -1,4 +1,3 @@
-// screens/PokemonDetailScreen.js
 import { useState, useEffect } from "react"
 import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, ActivityIndicator, Dimensions } from "react-native"
 import { Ionicons } from "@expo/vector-icons"
@@ -25,11 +24,9 @@ const PokemonDetailScreen = ({ route, navigation }) => {
       try {
         setLoading(true)
 
-        // Fetch pokemon details
         const pokemonData = await fetchPokemonDetail(id || name)
         setPokemon(pokemonData)
 
-        // Fetch species and evolution chain
         const speciesData = await fetchPokemonSpecies(id || name)
         const evolutionData = await fetchEvolutionChain(speciesData.evolutionChainUrl)
         setEvolutions(evolutionData)

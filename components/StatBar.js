@@ -1,4 +1,3 @@
-// components/StatBar.js
 import { View, Text, StyleSheet } from "react-native"
 
 const getStatColor = (name) => {

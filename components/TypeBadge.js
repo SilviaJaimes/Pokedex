@@ -1,4 +1,3 @@
-// components/TypeBadge.js
 import { View, Text, StyleSheet } from "react-native"
 
 const getTypeColor = (type) => {

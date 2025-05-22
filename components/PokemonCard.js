@@ -1,4 +1,3 @@
-// components/PokemonCard.js (con animaciones)
 import React, { useRef, useEffect } from "react"
 import { View, Text, Image, StyleSheet, TouchableOpacity, Dimensions, Animated } from "react-native"
 import { Ionicons } from "@expo/vector-icons"
@@ -6,7 +5,7 @@ import { useFavorites } from "../context/FavoritesContext"
 import TypeBadge from "./TypeBadge"
 
 const { width } = Dimensions.get("window")
-const cardWidth = (width - 48) / 2 // 2 cards per row with consistent padding
+const cardWidth = (width - 48) / 2
 
 const PokemonCard = ({ pokemon, onPress, index }) => {
   const { isFavorite, addFavorite, removeFavorite } = useFavorites()
@@ -15,7 +14,6 @@ const PokemonCard = ({ pokemon, onPress, index }) => {
   const translateY = useRef(new Animated.Value(50)).current
 
   useEffect(() => {
-    // Delay animation based on index for staggered effect
     const delay = index * 100;
     
     Animated.parallel([

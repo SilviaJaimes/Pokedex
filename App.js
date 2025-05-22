@@ -22,14 +22,14 @@ const HomeStack = () => {
       screenOptions={{
         headerStyle: {
           backgroundColor: "#f4511e",
-          elevation: 0, // Elimina la sombra en Android
-          shadowOpacity: 0, // Elimina la sombra en iOS
+          elevation: 0,
+          shadowOpacity: 0,
         },
         headerTintColor: "#fff",
         headerTitleStyle: {
           fontWeight: "bold",
         },
-        headerShown: false, // Oculta el header para usar nuestro propio diseño
+        headerShown: false,
       }}
     >
       <Stack.Screen name="PokemonList" component={HomeScreen} options={{ title: "Pokédex" }} />

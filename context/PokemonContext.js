@@ -1,4 +1,3 @@
-// context/PokemonContext.js
 import { createContext, useState, useEffect, useContext } from "react"
 import { fetchPokemons, fetchPokemonTypes } from "../Services/api"
 
@@ -12,7 +11,7 @@ export const PokemonProvider = ({ children }) => {
   const [error, setError] = useState(null)
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedTypes, setSelectedTypes] = useState([])
-  const [sortOption, setSortOption] = useState("id") // Default sort by ID
+  const [sortOption, setSortOption] = useState("id")
 
   useEffect(() => {
     const loadInitialData = async () => {
@@ -38,17 +37,17 @@ export const PokemonProvider = ({ children }) => {
   useEffect(() => {
     let result = [...pokemons]
 
-    // Apply search filter
+    // Aplicando filtro para buscar por nombre
     if (searchTerm) {
       result = result.filter((pokemon) => pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()))
     }
 
-    // Apply type filters
+    // Aplicando filtro para buscar por tipo
     if (selectedTypes.length > 0) {
       result = result.filter((pokemon) => selectedTypes.every((type) => pokemon.types.includes(type)))
     }
 
-    // Apply sorting
+    // Aplicando orden
     result = sortPokemons(result, sortOption)
 
     setFilteredPokemons(result)
